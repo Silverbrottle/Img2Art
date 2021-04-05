@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ 	<link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap" rel="stylesheet">
+ 	<link rel="preconnect" href="https://fonts.gstatic.com">
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style_index.css') }}">
+	 <link rel = "icon" href = "{{ url_for('static', filename='images/Logo1/logo2.2.png') }}" 
+        type = "image/x-icon">
+          
+
+	<title>Img2Art | Create Art</title>
+
+</head>
+
+<body>
+	<div class="back">
+		<div id="header" >
+
+			<img src="{{ url_for('static', filename='images/Logo1/logo2.2.png') }}" alt="Img2Art" width="60" height="60">
+			<h2 id="logo">Img2Art</h2>
+
+			<button class="header-button" onclick="window.location.href='{{ url_for('style') }}';">Get Started</button>
+			<nav>
+         		<ul>
+				<li><a href="#info"><b>Create</b></a></li>
+                <li><a href="#video-container"><b>Inspect</b></a></li>
+                <li><a href="#artists"><b>Artists</b></a></li>
+                <li><a href="#spotlight"><b>Spotlight</b></a></li>
+                <li><a href="#creators-container"><b>Creators</b></a></li>
+            	</ul>
+            </nav>
+		</div>
+		
+			<div id="info">
+				<p id="info-title">Experience and create the world around you through the spirit of the artists gone by.</p>
+				<p id="info-para">Through Img2Art create, edit and experiment on your photos by applying
+				 different art styles like impressionism, abstract, expressionism through the lens of famous artists.</p>
+				 <button class="info-button" onclick="window.location.href='{{ url_for('style') }}';">Get Started</button>
+			</div>
+
+			<div id="collage">
+				<img src="{{ url_for('static', filename='images/window.png') }}">
+			</div>
+	</div>
+
+	<div id="video-container">
+
+		<div id="video-info">
+
+			<p class="info-heading">Watch nature through the lens of Monet.</p>
+			<p class="info-para">Immerse yourself in the serenading clip of various sceneries like poppy fields, beautiful orchids,  gardens and natural landscape.</p>
+
+		</div>
+
+		<div id="video-player">
+
+			<video controls>
+  				<source src="{{ url_for('static', filename='media/output.mp4') }}" type="video/mp4">
+			</video>
+
+		</div>
+
+	</div>
+
+	<div id="artists">
+			<div>
+
+			<p class="info-heading">Explore the artists.</p>
+			<p class="info-para">See the works and creation of various artists, their styles which are used in img2art.</p>
+
+			</div>
+
+			<div id="artists-container">
+
+				<div class="artists-box">
+					<a class="href-black" href="/vangogh" style="color: black">
+					<img src="{{ url_for('static', filename='images/van-gogh.jpg') }}">
+					<p class="artists-name">Van Gogh</p>
+					<p class="artists-desc">Vincent Willem van Gogh was a Dutch post-impressionist painter who posthumously became one of the most famous and influential figures in the history of Western art.</p>				
+					</a>
+				</div>
+
+
+				<div class="artists-box">
+					<a class="href-black" href="monet" style="color: black">
+					<img src="{{ url_for('static', filename='images/monet.jpg') }}">
+					<p class="artists-name">Claude Monet</p>
+					<p class="artists-desc">Oscar-Claude Monet was a French painter, and a key figure in the Impressionist movement that transformed French painting in the second half of the nineteenth century.</p>
+					</a>
+				</div>
+
+				<div class="artists-box">
+					<a class="href-black" href="pablopicasso" style="color: black">
+					<img src="{{ url_for('static', filename='images/picasso.png') }}">
+					<p class="artists-name">Pablo Picasso</p>
+					<p class="artists-desc">Pablo Picasso was Spanish painter, sculptor, printmaker, ceramicist, and stage designer, one of the greatest and most-influential artists of the 20th century and the creator of Cubism.</p>
+					</a>
+				</div>
+
+				<div class="artists-box">
+					<a class="href-black" href="paulcezzane" style="color: black">
+					<img src="{{ url_for('static', filename='images/paul-cezanne-1.jpg') }}">
+					<p class="artists-name">Paul Cézanne</p>
+					<p class="artists-desc">Paul Cézanne was a French Post-Impressionist painter, whose works influenced the development of many 20th-century art movements, especially Cubism.</p>
+					</a>				
+				</div>
+
+				<div class="artists-box">
+					<a class="href-black" href="jacksonpollock" style="color: black">
+					<img src="{{ url_for('static', filename='images/pollock-2.jpg') }}">
+					<p class="artists-name">Jackson Pollock</p>
+					<p class="artists-desc">Jackson Pollock was an influential American painter, and the leading force behind the abstract expressionist movement in the art world.</p>
+					</a>
+				</div>
+
+				<div class="artists-box">
+					<a class="href-black" href="paulgaguin" style="color: black">
+					<img src="{{ url_for('static', filename='images/gaugin.jpg') }}">
+					<p class="artists-name">Paul Gauguin</p>
+					<p class="artists-desc">Paul Gauguin was a French Post-Impressionist artista and is recognized for his experimental use of color and Synthetist style that were distinct from Impressionism.</p>
+					</a>
+				</div>
+
+				<div class="artists-box">
+					<a class="href-black" href="wassilyk" style="color: black">
+					<img src="{{ url_for('static', filename='images/kadinsky.jpeg') }}">
+					<p class="artists-name">Wassily Kandinsky</p>
+					<p class="artists-desc">Wassily Wassilyevich Kandinsky was a Russian painter and art theorist. Kandinsky is generally credited as the pioneer of abstract art.</p>
+					</a>
+				</div>
+
+				<div class="artists-box">
+					<a class="href-black" href="berthemorisot" style="color: black">
+					<img src="{{ url_for('static', filename='images/morisot-1.jpg') }}">
+					<p class="artists-name">Berthe Morisot</p>
+					<p class="artists-desc">Berthe Marie Pauline Morisot was a French painter and a member of the circle of painters in Paris who became known as the Impressionists.</p>
+					</a>
+				</div>
+
+				<div class="artists-box">
+					<a class="href-black" href="/peploe" style="color: black">
+					<img src="{{url_for('static',filename='images/peploe.jpg')}}">
+					<p class="artists-name">John Peploe</p>
+					<p class="artists-desc">John Peploe was a Norwegian painter.He expressed these obsessions through works of which included still lifes and landscapes showing influence of cubic art.</p>
+					</a>
+				</div>
+				
+			</div>
+
+		</div>
+
+		<div id="spotlight">
+
+			<div>
+
+			<p class="spot info-heading">Spotlight</p>
+			<p class="info-para">Check out some brilliant and facisinating results of style transfer.</p>
+
+			</div>
+
+			<div id="spot-scroller">
+				
+			</div>
+				
+		</div>
+
+
+
+		<div id="creators">
+		<div id="creators-container">
+			<div>
+			<p class="info-heading">Creators</p>
+			<p class="info-para">Know more about the contributors.</p>
+			</div>
+
+			
+				<div class="card">
+					<img src="{{ url_for('static', filename='images/ayush.png') }}" alt="Avatar" style="width:100%">
+					<div class="cardcontainer">
+						<h4><b>Ayush Navgiri</b></h4>
+						<p>sdfghn</p> 
+					</div>
+				</div>
+			
+				<div class="card">
+					<img src="{{ url_for('static', filename='images/shivani.png') }}" alt="Avatar" style="width:100%">
+					<div class="cardcontainer">
+    					<h4><b>Shivani Raul</b></h4> 
+    					<p>wertyuiop</p> 
+  					</div>
+				</div>
+			
+
+	
+				<div class="card">
+  					<img src="{{ url_for('static', filename='images/abhinav.png') }}" alt="Avatar" style="width:100%">
+  					<div class="cardcontainer">
+    					<h4><b>Abhinav Pisharody</b></h4> 
+    					<p>asdfghjkl</p> 
+  					</div>
+		
+			</div>
+
+				<div class="card_a">
+  					<img src="{{ url_for('static', filename='images/alisto.png') }}" alt="Avatar" style="width:100%">
+  					<div class="cardcontainer">
+    					<h4><b>Alisto Pinto</b></h4> 
+    					<p>wertyuiop</p> 
+  					</div>
+				</div>
+				
+		
+
+		</div>
+		
+		</div>
+
+
+	<div id="features">
+			<div>
+			<p class="info-heading">Key Features</p>
+			</div>
+
+			<div class="site-section">
+        	<div class="site-section-inside">
+
+            <div class="feature-box">
+                <center><img src="{{ url_for('static', filename='images/like.png') }}" alt="Easy to Use">
+                <h3>Easy to Use</h3></center>
+                <p>A user friendly and an efficient designing tool which is accessible to all users that is from Toddlers to Adults to Older generations. Availability to larger audience with love for art and imagination. Toddlers can do it. So can you!</p>
+            </div>
+
+            <div class="feature-box">
+                <center><img src="{{ url_for('static', filename='images/loc.png') }}" alt="Accurate Navigation">
+                <h3>Accurate Navigation</h3></center>
+                <p>Just think of how easy this is to use. You can smoothly run across the entire webpage without third party assistance. It's just you, your screen along with the website. Browse through your requirements in an efficient way.</p>
+            </div>
+
+            <div class="feature-box">
+                <center><img src="{{ url_for('static', filename='images/heart.png') }}" alt="Fun to Use">
+                <h3>Compatible</h3></center>
+                <p>Efficient content formatting, loads within blink of an eye, good hosting. The load time as well as the request-response cycle is swift with referrence to users usability and concurrent usages.</p>
+            </div>
+
+            <div class="feature-box">
+            <div class="fancy">
+            	<center><h3 style="font-family:verdana">Be Creative</h3></center>
+            	<p>Let inspiration fuel your creativity....If it can be thought, it can be created and when we are involved in it we are living upto our imagination.</p>
+            </div>
+        	</div>
+
+        	<div class="feature-box">
+            <div class="fancy">
+            	<center><h3 style="font-family:verdana">Be Effortless</h3></center>
+            	<p>Leonardo Da Vinci wrote “Simplicity is the ultimate sophistication,” and we couldn’t agree more. If it’s complex and difficult, it needs to be simplified until it’s effortless.</p>
+            </div>
+        	</div>
+            
+        	<div class="feature-box">
+            <div class="fancy">
+            	<center><h3 style="font-family:verdana">Be Open</h3></center>
+            	<p>Keep an open mind when it comes to change, ideas, and diversity. 
+            	You never know where inspiration is waiting for you.</p>
+            </div>
+        	</div>
+
+        	</div>
+        	</div>
+      </div>
+
+
+  
+    <div id="pps">
+      	<p class="info-heading">What People Say</p>
+    	<div class="site-section ">
+        <div class="site-section-inside">
+
+	         <div class="pps-box">
+                <div class="pps-content">
+                    One of the best Creative Website design I have come across, their service is the best.
+                </div>
+                <div class="pps-author">
+                    <img src="{{ url_for('static', filename='images/default_user.png') }}" alt="David East">
+                    <h5><b>Anonymous user</b></h5>
+                    <span>img2art</span>
+                </div>
+            </div>
+
+            <div class="pps-box">
+                <div class="pps-content">
+                    Their service is by far the most influential I've ever seen,team IMG2ART is awesome.
+                </div>
+                <div class="pps-author">
+                    <img src="{{ url_for('static', filename='images/default_user.png') }}" alt="Holly Lloyd">
+                    <h5><b>Anonymous user</b></h5>
+                    <span>img2art</span>
+                </div>
+            </div>
+
+            <div class="pps-box">
+                <div class="pps-content">
+                    The concept of coverting one image form into another is phenomenal.
+                </div>
+                <div class="pps-author">
+                    <img src="{{ url_for('static', filename='images/default_user.png') }}" alt="Brad Green">
+                    <h5><b>Anonymous user</b></h5>
+                    <span>img2art</span>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+      </div>
+
+
+
+    <div id="contact">
+    	<div>
+    		<p class="info-heading">Contact Us</p>
+    	</div>
+
+    	  <div><form>
+    	  	<center>
+                            <input type="text" placeholder="name" required>
+                            <input type="email" placeholder="email" required><br>
+                            <textarea placeholder="Valuable Feedback" required rows="5"></textarea><br>
+                           	<button class="header-button">Send</button>
+            </center>
+          </form></div>
+    </div>
+
+    <div id="footer">
+        <img src="{{ url_for('static', filename='images/Logo1/logo2.2.png') }}" alt="Img2Art width="80" height="80">
+        <span> <br>Copyright &copy; 2020-2021 </br></span>
+        <span>Made on Earth by SFIT Students</span>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+      	
+
+
+
+
+		
+
+      	
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
