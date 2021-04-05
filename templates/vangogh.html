@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 4;
+  font-family: SFProDisplay-Regular;
+  background-color: black;
+}
+
+.header {
+  text-align: center;
+  padding: 22px;
+}
+#photos {
+    width:100%;
+    columns:3;
+    column-gap:3%;
+    z-index:1;
+    transition:0.4s ease-in-out;
+}
+#photos img {
+    width:100%;
+    height:auto;
+    margin:4.5% 0px;
+    transition:0.4s ease-in-out;
+}
+#photos img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+</style>
+<body>
+
+<div class="header">
+  <h1 style="color: white">Van Gogh's Misterious Gallery ✨</h1>
+  <h3 style="font-family: Arial ; color:white">Lets unlock the mystery of a great artist of the time 1853-1890</h3>
+</div>
+
+<div id="photos"> 
+    <img src="{{ url_for('static', filename='images/vangogh-im/vg1.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/vangogh-im/vg5.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/vangogh-im/vg3.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/vangogh-im/vg8.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/vangogh-im/vg2.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/vangogh-im/vg6.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/vangogh-im/vg12.jfif') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/vangogh-im/vg7.jpeg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/vangogh-im/vg4.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/vangogh-im/vg11.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/vangogh-im/vg9.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/vangogh-im/vg10.jpg') }}" style="width:100%"> 
+  </div>
+</div>
+
+</body>
+</html>

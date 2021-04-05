@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ 	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style_transfer.css')}}">
+
+ 	<link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap" rel="stylesheet">
+ 	<link rel="preconnect" href="https://fonts.gstatic.com">
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{{url_for('static',filename='css/jquery.loadingModal.css')}}">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom/dist/panzoom.min.js"></script>
+	<script src="{{url_for('static',filename='css/jquery.loadingModal.js')}}"></script>
+
+	<title>Img2Art | Create Art</title>
+
+</head>
+<body>
+	<div id="header">
+		<h3 id="logo"><a href="{{ url_for('index') }}" style="text-decoration: none;color: white;">Img2Art</a></h3>
+		<button id="openButton" class="headerButton" onclick="getFile()">Open</button>
+		<button id="saveButton" class="headerButton" onclick="saveFile()">Save</button>
+	</div>
+
+
+		<div id="artist-div">
+
+			<p id="artist-title">ARTISTS</p>
+
+			<div id="van-gogh" class="artist-boxes" onclick="artistStyle(this)">
+				<img src="{{url_for('static',filename='images/painting/van-gogh-painting.jpg')}}">
+				<p class="artist-name">Van Gogh</p>
+			</div>
+
+			<div id="monet" class="artist-boxes" onclick="artistStyle(this)">
+				<img src="{{url_for('static',filename='images/painting/monet-painting.jpg')}}">
+				<p class="artist-name">Monet</p>
+			</div>
+
+			<div id="picasso" class="artist-boxes" onclick="artistStyle(this)">
+				<img src="{{url_for('static',filename='images/painting/picasso-painting.jpg')}}">
+				<p class="artist-name">Piccaso</p>
+			</div>
+
+			<div id="cezanne" class="artist-boxes" onclick="artistStyle(this)">
+				<img src="{{url_for('static',filename='images/painting/cezanne-painting.jpg')}}">
+				<p class="artist-name">Cezzane</p>
+			</div>
+
+			<div id="pollock" class="artist-boxes" onclick="artistStyle(this)">
+				<img src="{{url_for('static',filename='images/painting/pollock-painting.jpg')}}">
+				<p class="artist-name">Pollock</p>
+			</div>
+
+			<div id="kandinsky" class="artist-boxes" onclick="artistStyle(this)">
+				<img src="{{url_for('static',filename='images/painting/kandinsky-painting.jpg')}}">
+				<p class="artist-name">Kandinsky</p>
+			</div>
+
+			<div id="morisot" class="artist-boxes" onclick="artistStyle(this)">
+				<img src="{{url_for('static',filename='/images/painting/morisot-painting.jpg')}}">
+				<p class="artist-name">Morisot</p>
+			</div>
+
+			<div id="gauguin" class="artist-boxes" onclick="artistStyle(this)">
+				<img src="{{url_for('static',filename='images/painting/gauguin-painting.jpg')}}">
+				<p class="artist-name">Gauguin</p>
+			</div>
+
+			<div id="peploe" class="artist-boxes" onclick="artistStyle(this)">
+				<img src="{{url_for('static',filename='images/painting/peploe-painting.jpg')}}">
+				<p class="artist-name">Peploe</p>
+			</div>
+
+		</div>
+
+		<div id="canvas-div" draggable="true">
+				{% if files %}
+					<img id="canvas-img" src="{{ url_for('upload', filename=files) }}">
+				{% endif %}
+				
+				<form id="filesub" method="POST" action="" enctype="multipart/form-data">
+					<div class="canvas-file-hidden">
+				      <p><input type="file" id="upfile" name="file">
+				      	 <input type="text" name="fileform">
+				      </p>
+				      {% if files %}
+				      <a id="save" href="{{ url_for('upload', filename=files) }}" download="img2art"></a>
+				      {% endif %}
+				    </div>
+			    </form>
+
+			    <form id="stylesub" method="POST" action="">
+			    	<div class="canvas-file-hidden">
+					<p><input type="text" name="artist" id="styleval"></p>
+				</div>
+				</form>
+		</div>
+		<div id="canvas-tools">
+			<button style="margin-top: 5px;
+			font-size: 17px;
+			border: 1px solid #454752;
+			width: 60px;
+			height: 35px;
+			border-radius: 5px;
+			color: #fff;
+			margin-left: 40%;
+			background-color: #373842;" onclick="window.location.href='{{ url_for('style') }}';">Reset</button>
+		</div>
+
+<script type="text/javascript">
+
+const element = document.getElementById('canvas-img')
+const panzoom = Panzoom(element, {
+    maxScale: 4,
+	minScale: 0.125,
+	startScale: 1,
+	panOnlyWhenZoomed: false,
+	startX: 0,
+	startY: 0,
+	step: 0.3,
+	contain: null,
+	touchAction: 'none',
+	overflow: 'hidden'
+});
+
+const parent = element.parentElement
+parent.addEventListener('wheel', panzoom.zoomWithWheel);
+
+
+function getFile(){
+
+     var inputfile = document.getElementById("upfile");
+     inputfile.click();
+     inputfile.onchange = function() {
+    	document.getElementById("filesub").submit();	
+		};
+}
+function saveFile(){
+	document.getElementById('save').click();
+}
+
+function artistStyle(e){
+	var img = document.getElementById('canvas-img');
+	if(img==null){
+		alert('Please Upload Image!')
+	}
+	else{
+		document.getElementById('styleval').value = e.id;
+		document.getElementById('stylesub').submit();
+		$('body').loadingModal({
+		  position: 'auto',
+		  text: 'Hold your brush',
+		  color: '#1D1B2F',
+		  opacity: '0.7',
+		  backgroundColor: 'rgb(255, 181, 251)',
+		  animation: 'foldingCube'
+		});
+	}
+}
+
+</script>
+</body>
+</html>

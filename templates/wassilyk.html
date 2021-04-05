@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 4;
+  font-family: SFProDisplay-Regular;
+  background-color: #F8F8F8;
+}
+
+.header {
+  text-align: center;
+  padding: 22px;
+}
+
+.row {
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 6px;
+  margin-right: 8px;
+}
+/*4colums next to each other*/
+.column {
+  -ms-flex: 30%;
+  flex: 35%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 10px;
+  vertical-align: middle;
+  width: 140%;
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+</style>
+<body>
+
+<div class="header">
+  <h1>Wassiy Kadinsky's Art Gallery♾ </h1>
+  <h3 style="font-family: Arial">Lets take a troll through the beautiful collection of Masterpieces.</h3>
+</div>
+
+<div class="row"> 
+  <div class="column">
+    <img src="{{ url_for('static', filename='images/kandisky-im/k1.jpg') }}" style="width:100% ; height: 50% ">
+    <img src="{{ url_for('static', filename='images/kandisky-im/k2.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/kandisky-im/k3.jpg') }}" style="width:100%; height:50%" >
+   
+  </div>
+  <div class="column">
+    <img src="{{ url_for('static', filename='images/kandisky-im/k4.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/kandisky-im/k5.jpg') }}" style="width:100%; height: 50%">
+    <img src="{{ url_for('static', filename='images/kandisky-im/k6.jpg') }}" style="width:100%; height: 50% ">
+    
+  </div>  
+  <div class="column">
+    <img src="{{ url_for('static', filename='images/kandisky-im/k7.jpg') }}" style="width:100% ; height:50%">
+    <img src="{{ url_for('static', filename='images/kandisky-im/k8.jpg') }}" style="width:100%; height: 30%">
+    <img src="{{ url_for('static', filename='images/kandisky-im/k9.jpg') }}" style="width:100%; height: 50%">
+  </div>
+  <div class="column">
+    <img src="{{ url_for('static', filename='images/kandisky-im/k10.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/kandisky-im/k11.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/kandisky-im/k12.jpg') }}" style="width:100%; height: 50%"> 
+  </div>
+</div>
+
+</body>
+</html>

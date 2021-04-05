@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style_index.css') }}">
+
+ 	<link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap" rel="stylesheet">
+ 	<link rel="preconnect" href="https://fonts.gstatic.com">
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+
+	
+
+	<title>Img2Art | Create Art</title>
+
+</head>
+
+<body>
+	<div class="back">
+		<div id="header">
+			<h2 id="logo">Img2Art</h2>
+			<button class="header-button" onclick="window.location.href='{{ url_for('style') }}';">Get Started</button>
+		</div>
+		
+			<div id="info">
+				<p id="info-title">Experience and create the world around you through the spirit of the artists gone by.</p>
+				<p id="info-para">Through Img2Art create, edit and experiment on your photos by applying
+				 different art styles like impressionism, abstract, expressionism through the lens of famous artists.</p>
+				 <button class="info-button" onclick="window.location.href='{{ url_for('style') }}';">Get Started</button>
+			</div>
+
+			<div id="collage">
+				<img src="{{url_for('static',filename='images/window.png')}}">
+			</div>
+	</div>
+
+	<div id="video-container">
+
+		<div id="video-info">
+
+			<p class="info-heading">Watch France through lens of Monet.</p>
+			<p class="info-para">Immerse yourself in the serenading clip of france and view the locations of Mont Saint Michel, Nice & Menton, Ypor, Chamonix & Mont Blanc, Lake Annecy,La Ciotat as if monet had painted them.</p>
+
+		</div>
+
+		<div id="video-player">
+
+			<video controls>
+  				<source src="{{url_for('static',filename='media/france.webm')}}" type="video/mp4">
+			</video>
+
+		</div>
+
+		<div id="artists">
+			<div>
+
+			<p class="info-heading">Explore the artists.</p>
+			<p class="info-para">See the works and creation of various artists, their styles which are used in img2art.</p>
+
+			</div>
+
+			<div id="artists-container">
+
+				<div class="artists-box">
+					<img src="{{url_for('static',filename='images/van-gogh.jpg')}}">
+					<p class="artists-name">Van Gogh</p>
+					<p class="artists-desc">Vincent Willem van Gogh was a Dutch post-impressionist painter who posthumously became one of the most famous and influential figures in the history of Western art.</p>				
+				</div>
+
+				<div class="artists-box">
+					<img src="{{url_for('static',filename='images/monet.jpg')}}">
+					<p class="artists-name">Claude Monet</p>
+					<p class="artists-desc">Oscar-Claude Monet was a French painter, and a key figure in the Impressionist movement that transformed French painting in the second half of the nineteenth century.</p>
+					
+				</div>
+
+				<div class="artists-box">
+					<img src="{{url_for('static',filename='images/picasso.png')}}">
+					<p class="artists-name">Pablo Picasso</p>
+					<p class="artists-desc">Pablo Picasso was Spanish painter, sculptor, printmaker, ceramicist, and stage designer, one of the greatest and most-influential artists of the 20th century and the creator of Cubism.</p>
+				</div>
+
+				<div class="artists-box">
+					<img src="{{url_for('static',filename='images/paul-cezanne.jpg')}}">
+					<p class="artists-name">Paul Cézanne</p>
+					<p class="artists-desc">Paul Cézanne was a French Post-Impressionist painter, whose works influenced the development of many 20th-century art movements, especially Cubism.</p>				
+				</div>
+
+				<div class="artists-box">
+					<img src="{{url_for('static',filename='images/pollock.jpg')}}">
+					<p class="artists-name">Jackson Pollock</p>
+					<p class="artists-desc">Jackson Pollock was an influential American painter, and the leading force behind the abstract expressionist movement in the art world.</p>
+					
+				</div>
+				<div class="artists-box">
+					<img src="{{url_for('static',filename='images/gaugin.jpg')}}">
+					<p class="artists-name">Paul Gauguin</p>
+					<p class="artists-desc">Paul Gauguin was a French Post-Impressionist artista and is recognized for his experimental use of color and Synthetist style that were distinct from Impressionism.</p>
+				</div>
+
+				<div class="artists-box">
+					<img src="{{url_for('static',filename='images/kadinsky.jpeg')}}">
+					<p class="artists-name">Wassily Kandinsky</p>
+					<p class="artists-desc">Wassily Wassilyevich Kandinsky was a Russian painter and art theorist. Kandinsky is generally credited as the pioneer of abstract art.</p>				
+				</div>
+
+				<div class="artists-box">
+					<img src="{{url_for('static',filename='images/morisot.jpg')}}">
+					<p class="artists-name">Berthe Morisot</p>
+					<p class="artists-desc">Berthe Marie Pauline Morisot was a French painter and a member of the circle of painters in Paris who became known as the Impressionists.</p>
+					
+					<div class="artists-box">
+						<a class="href-black" href="/peploe" style="color: black">
+						<img src="{{url_for('static',filename='images/peploe.jpg')}}">
+						<p class="artists-name">John Peploe</p>
+						<p class="artists-desc">John Peploe was a Norwegian painter.He expressed these obsessions through works of which included still lifes and landscapes showing influence of cubic art.</p>
+						</a>
+					</div>
+				
+			</div>
+
+		</div>
+
+		<div id="spotlight">
+
+			<div>
+
+			<p class="spot info-heading">Spotlight</p>
+			<p class="info-para">Check out some brilliant and facisinating results of style transfer.</p>
+
+			</div>
+
+			<div id="spot-scroller">
+				
+			</div>
+				
+helo
+
+		</div>
+
+	</div>
+
+</body>
+</html>

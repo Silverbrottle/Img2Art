@@ -1,0 +1,141 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+}
+@font-face {
+  font-family: Chopsic;
+  src: url(Chopsic-K6Dp.ttf);
+}
+#header{
+	width: 100%;
+	height: 60px;
+	background-color: #373842;
+	z-index: 1;
+	box-shadow: 0 8px 6px -6px black;
+}
+#logo{
+	color: #fff;
+	float: left;
+	margin-top: 15px;
+	margin-left: 20px;
+	font-family: Monoton;
+}
+#openButton{
+	display: inline-block;
+	margin-left: 700px;
+	margin-right: 20px;
+}
+#saveButton{
+	display: inline-block;
+}
+.headerButton{
+
+	margin-top: 13px;
+	font-size: 17px;
+	border: 1px solid #454752;
+	width: 60px;
+	height: 35px;
+	border-radius: 5px;
+	color: #fff;
+	background-color: #373842;
+}
+.headerButton:hover{
+	background-color: #494a52;
+	padding: 0px;
+	margin: 0px;
+}
+
+#artist-div{
+	display: inline-block;
+	margin-right: 0px;
+	float: left;
+	background-color: #2d2e37;
+	height: 693px;
+	width: 20%;
+	border: 1px solid #2d2e37;
+	overflow-y: scroll;
+}
+
+::-webkit-scrollbar{
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #676b78; 
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8f8f8f; 
+}
+
+#artist-title{
+	font-size: 17px;
+	font-family: Chopsic;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	color: #fff;
+}
+.artist-boxes{
+	padding: 0px;
+	margin-left: 10px;
+	height: 110px;
+	width: 95%;
+	margin-bottom: 0px;
+	border: 3px solid transparent;
+	cursor: pointer;
+}
+.artist-boxes:hover{
+	border: 3px solid #dbdbdb;
+}
+.artist-name{
+	-webkit-text-stroke-width: 2px;
+  	-webkit-text-stroke-color: black;
+	font-family: Chopsic;
+	color: #fff;
+	margin-top: -65px;
+	text-align: center;
+	font-size: 17px;
+}
+.artist-boxes img{
+	width: 100%;
+	height: 100%;
+}
+#canvas-div{.
+	display: inline-block;
+	margin-left: 0px;
+	margin-right: 0px;
+	float: left;
+	background-color: #1e2024;
+	height: 650px;
+	width: 80%;
+	border: 1px solid #1e2024;
+	overflow: hidden;
+}
+#canvas-img{
+	margin-left: 200px;
+	position: relative;
+	margin-top: 75px;
+	width: 880px;
+	height: 500px;
+	object-fit: contain;
+	
+}
+.canvas-file-hidden{
+	height: 0px;
+	width:0px; 
+	overflow:hidden;
+}
+
+#canvas-tools{
+	margin-top: 650px;
+	height: 43px;
+	width: 100%;
+	background-color: #373842;
+	border: 1px solid #373842;
+}

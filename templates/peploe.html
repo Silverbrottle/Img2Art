@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 4;
+  font-family: SFProDisplay-Regular;
+  background-color: ;
+  margin-right: 8px;
+}
+
+.header {
+  text-align: center;
+  padding: 10px;
+}
+#photos {
+    width:100%;
+    columns:3;
+    column-gap:2%;
+    z-index:3;
+}
+#photos img {
+    border-radius: 10px;
+    width:50%;
+    height:50%;
+    margin:3.5% 0px;
+    transition:0.4s ease-in-out;
+}
+
+</style>
+<body>
+
+<div class="header">
+  <h1 style="color: #006bb3">John Peploe's Art Gallery 🎨🖌️</h1>
+  <h3 style="font-family: Arial ; color:black">Walking you through the artistic style of John People's Art Gallery.</h3>
+</div>
+
+<div id="photos"> 
+    <img src="{{ url_for('static', filename='images/peploe-im/pp1.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/peploe-im/pp3.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/peploe-im/pp4.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/peploe-im/pp5.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/peploe-im/pp6.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/peploe-im/pp7.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/peploe-im/pp8.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/peploe-im/pp9.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/peploe-im/pp10.jpg') }}" style="width:100%">
+  </div>
+</div>
+
+</body>
+</html>

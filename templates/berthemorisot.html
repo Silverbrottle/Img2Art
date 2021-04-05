@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 4;
+  font-family: SFProDisplay-Regular;
+  background-color: black;
+}
+
+.header {
+  text-align: center;
+  padding: 22px;
+}
+#photos {
+    width:100%;
+    columns:3;
+    column-gap:3%;
+    z-index:1;
+    transition:0.4s ease-in-out;
+}
+#photos img {
+    width:100%;
+    height:auto;
+    margin:4.5% 0px;
+    transition:0.4s ease-in-out;
+}
+#photos img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+</style>
+<body>
+
+<div class="header">
+  <h1 style="color: white">Berthe Morisot's Art Gallery ✨</h1>
+  <h3 style="font-family: Arial ; color:white">Lets take a troll throughout the magnificient and reknowned female artist</h3>
+</div>
+
+<div id="photos"> 
+    <img src="{{ url_for('static', filename='images/morisot-im/mo1.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/morisot-im/mo2.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/morisot-im/mo3.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/morisot-im/mo4.jpg') }}" style="width:100%; height: 10%">
+    <img src="{{ url_for('static', filename='images/morisot-im/mo5.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/morisot-im/mo6.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/morisot-im/mo7.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/morisot-im/mo8.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/morisot-im/mo9.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/morisot-im/mo10.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/morisot-im/mo11.jpg') }}" style="width:100%"> 
+    <img src="{{ url_for('static', filename='images/morisot-im/mo12.jpg') }}" style="width:100%">
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 4;
+  font-family: SFProDisplay-Regular;
+  background-color: black;
+}
+
+.header {
+  text-align: center;
+  padding: 22px;
+}
+#photos {
+    width:100%;
+    columns:3;
+    column-gap:3%;
+    z-index:1;
+    transition:0.4s ease-in-out;
+}
+#photos img {
+    width:100%;
+    height:auto;
+    margin:4.5% 0px;
+    transition:0.4s ease-in-out;
+}
+#photos img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+</style>
+<body>
+
+<div class="header">
+  <h1 style="color: white">Paul Gaguin's Art Gallery ✨</h1>
+  <h3 style="font-family: Arial ; color:white">Lets take a troll to one of his kind artist Paul Gaguin</h3>
+</div>
+
+<div id="photos"> 
+    <img src="{{ url_for('static', filename='images/gaugin-im/g1.jfif') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/gaugin-im/g5.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/gaugin-im/g6.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/gaugin-im/g3.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/gaugin-im/g4.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/gaugin-im/g7.jfif') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/gaugin-im/g9.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/gaugin-im/g10.jpeg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/gaugin-im/g8.jfif') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/gaugin-im/g11.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='images/gaugin-im/g12.jpg') }}" style="width:100%"> 
+    <img src="{{ url_for('static', filename='images/gaugin-im/g2.jpg') }}" style="width:100%">
+  </div>
+</div>
+
+</body>
+</html>
